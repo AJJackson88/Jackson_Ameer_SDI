@@ -4,6 +4,7 @@
 
 alert("Hello, how may I assist you today?")
 
+
 // Variables
 var milk;
 var eggs;
@@ -18,6 +19,7 @@ var juice;
 var amount;
 var salestax;
 var totalamount
+
 
 // prompt
 milk = prompt("How many cartons of milk would you like to purchase ($5.00ea.):");
@@ -58,3 +60,15 @@ topramennoodles = Number(topramennoodles) * .17;
 // prompt
 juice = prompt("How many juices would you like to purchase ($2.50ea.):");
 juice = Number(juice) * 2.50;
+
+
+alert("Thank you for shopping with us, have a nice day!")
+
+// total grocery bill
+amount = Number(milk + eggs + mayonnaise + kraftsinglesslicecheese + sandwichmeat + aquafinabottlewater + cereal + bread + topramennoodles + juice); 
+
+// total sales tax = amount * 7.5%
+salestax = Number(amount * 0.075);
+
+// total amount = amount + total salestax
+totalamount = Number(amount + salestax);
