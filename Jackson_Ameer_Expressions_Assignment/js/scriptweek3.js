@@ -50,4 +50,33 @@ atticaccess = confirm("Is there attic access? (Ok for Yes, Cancel for No)");
 		// code that runs if there is no attic access
 		console.log("No, there is no attic access.");
 	
-		
+		console.log("It is " + crawlspace + " that there is a crawl space entrence?");
+
+// confirm Boolean of either true or false
+crawlspace = confirm("Is there a crawl space entrence? (Ok for Yes, Cancel for No)");
+	
+	if (crawlspace === true) {
+
+		// code that will run if there is a crawl spaces entrence
+		var extraFeet = prompt("How many more feet of wire is needed for this route?");
+		extraFeet = Number(extraFeet);
+
+			// number conditional
+			if (extraFeet >= 10) {
+			
+			// code that will run if there is a crawl space entrence and extarFeet is greater than or eqaul to 10
+			
+			extraFeet = extraFeet + distancetojack;
+			console.log("The total distance to the phone jack running the wire under house will be " + extraFeet + ".")
+	
+			} else if (extraFeet === 0) {
+				extraFeet = Number(prompt("Please enter the extra feet of wire needed:"));
+				console.log("Thank you. The new total feet of wire needed is " + (extraFeet + distancetojack) + "ft.")
+			
+			} else {
+			
+			// code that runs if there is attic access and extraFeet is less than 10
+			console.log("This route does not require much more feet.");
+}
+
+	
