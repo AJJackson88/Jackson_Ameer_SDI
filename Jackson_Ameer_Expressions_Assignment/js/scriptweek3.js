@@ -15,3 +15,39 @@ console.log("The end point of my wire run is at the " + jack + ", which is locat
 console.log("The distance is approximately " + distancetojack + "ft. straight from the " + NID + " to the office.");
 console.log("It is " + atticaccess + " that there is attic access?");
 
+// confirm returns a Boolean of either true or false
+atticaccess = confirm("Is there attic access? (Ok for Yes, Cancel for No)");
+
+// comparison operators 
+// == - the equality operator - only looks at the value when comparing
+// === - the strict equality or identity operator - looks at the value AND the data type
+	if (atticaccess === true) {
+
+		// code that runs if there is attic access
+		var extraFeet = prompt("How many more feet of wire is needed for this route?");
+		extraFeet = Number(extraFeet);
+
+			// number conditional
+			if (extraFeet >= 10) {
+			
+				// code that runs if there is attic access and extraFeet is greater than or equal to 10
+				extraFeet = extraFeet + distancetojack;
+				console.log("The total distance to the phone jack running the wire through attic will be " + extraFeet + "ft.");
+	
+			} else if (extraFeet === 0) {
+				
+				extraFeet = Number(prompt("Please enter the extra feet of wire needed:"));
+				console.log("Thank you. The new total feet of wire needed is " + (extraFeet + distancetojack) + "ft.")
+			
+			} else {
+			
+				// code that runs if there is attic access and extraFeet is less than 10
+				console.log("This route does not require much more feet.");
+}
+	 
+	} else {
+
+		// code that runs if there is no attic access
+		console.log("No, there is no attic access.");
+	
+		
