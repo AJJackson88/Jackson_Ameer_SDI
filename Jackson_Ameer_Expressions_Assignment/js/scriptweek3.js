@@ -79,4 +79,22 @@ crawlspace = confirm("Is there a crawl space entrence? (Ok for Yes, Cancel for N
 			console.log("This route does not require much more feet.");
 }
 
+	} else {
 	
+	// code that will run if there is no crawl space entrence
+	console.log("No, there is no crawl space entrence.");
+	var deny = prompt("Have you looked for an alternative route?");
+			
+			// validation
+			if (deny === "") {
+		
+				// if they entered nothing, confirm denial of service
+				deny = prompt("So you are saying that there are no alternative routes and we have to deny the customer service right?")
+				console.log("Thanks. Please inform the customer that " + deny + ", we have to deny service.")
+	
+			} else {
+
+				//if they entered yes
+				console.log("Ok, Please inform the customer that " + deny + " we have to deny service.")
+
+	}
